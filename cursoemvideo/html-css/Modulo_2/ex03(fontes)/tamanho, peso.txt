@@ -1,0 +1,6 @@
+Usar sempre px ou em
+16 px é o padrão
+1 em é o padrão
+16 px = 1 em
+
+font-weigth: lighter, normal, bold bolder em fontes do google

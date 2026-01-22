@@ -1,0 +1,5 @@
+Acessar color.adobe.com: monta paleta de cores personalizado, extrai da logo, e explora paletas criadas;
+palleton.com: usar simular uma paleta no site.
+coolors.co para gerar uma paleta sugerida pelo sistema.
+
+

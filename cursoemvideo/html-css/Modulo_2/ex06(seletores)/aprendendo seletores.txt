@@ -1,0 +1,3 @@
+Limitação do Id: segundo W3C, só pode usar em um elemento.
+Class: pode usar mais de um elemento.(importante classificar pela função e não pela forma)
+

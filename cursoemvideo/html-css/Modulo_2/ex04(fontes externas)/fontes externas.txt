@@ -1,0 +1,7 @@
+ir em google fontes e embedar com o código css e colar logo em baixo de style no código css
+
+ir em dafont.com escolher uma fonte e colocar dentro do css conforme fonte02.html
+
+usar extensao font ninja para captura as fontes de um site e escolher a fonte que mais agrada.
+
+usar o site whatfontis, fontsquirrel ou myfonts para captura fontes de imagens.

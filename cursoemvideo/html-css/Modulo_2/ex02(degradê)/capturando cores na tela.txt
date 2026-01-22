@@ -1,0 +1,3 @@
+adicionar na extensao do chrome: colorzila para captura no navegador.
+tirar printscreen e adicinar no color.adobe para montar uma paleta coerente.
+

@@ -1,0 +1,19 @@
+Circulo Cromático:
+    Objetivo da aula: definir uma paleta;
+    Paleta ideal: 3 a 5 cores;
+    
+    Cores Principais: amarelo, vermelho e azul;
+    cores secundárias: laranja, violeta e verde;
+    cores terciárias: entre um primaria e secundária: nomenclatura começa pela primeira;
+    cores frias: do amarelo esverdeado;
+    cores quentes: do amarelo ao roxo vermelhado;
+
+    Cores complementares: a cor oposta do Circulo Cromático;
+    Cores análogas: 3 cores vizinhas;
+    Cores análogas e uma complementar: 3 analogas e 1 complementar;
+    cores análogas relacionadas: duas vizinhas e salto para qualquer lado um cor;
+    cores intercaladas: salto de cores;
+    cores triádias: 3 cores saltadas simetricamente;
+    cores em quadrado: 4 cores saltadas simetricamente;
+    cores tetrádicas: 2 cores complementares + 2 cores complementares;
+    monocromia: uma cor com saturação e brilho alterados para formar um paleta;
