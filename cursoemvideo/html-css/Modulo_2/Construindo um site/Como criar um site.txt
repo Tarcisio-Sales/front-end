@@ -1,0 +1,10 @@
+criar o protótipo de tela no Mockflow ou Figma:
+    MockFlow serve pra rascunhar a estrutura das telas (wireframes) rápidos;(pre-design)
+    Figma serve pra desenhar a interface final com protótipo clicável e componentes reutilizáveis.(design final). 
+planejar as cores: adobe color, paletton ou coolores.co para definir uma paleta de cores.
+
+Escolher as fontes do projeto: google fonts(incorporar ao site) e dafont(fonte baixada. Importante olhar a compatibidade com acentos, maiusculas e minusculas).
+
+tudo isso baseado no propósito do site(blog, notícias, etc)
+
+Inserir o conteúdo com tags semânticas

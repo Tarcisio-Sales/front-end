@@ -1,0 +1,251 @@
+@charset "UTF-8";
+
+@font-face{
+  font-family: "Android";
+  src: url("../fontes/idroid.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root{
+  --cor0: #ebe5c5;
+  --cor1: #83e1ad;
+  --cor3: #2fa866;
+  --cor4: #1a5c37;
+  --cor5: #063d1e;
+
+  --font-sans: Arial, Verdana, Helvetica, sans-serif;
+  --font-display: "Bebas Neue", cursive;
+  --font-android: "Android", cursive;
+
+  --max: 1000px;
+  --r-sm: 6px;
+  --r-md: 10px;
+
+  --s-1: 10px;
+  --s-2: 20px;
+
+  --shadow: 0 0 20px rgba(0,0,0,.25);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: var(--cor0);
+  font-family: var(--font-sans);
+  color: #111;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a{
+  color: inherit;
+}
+
+a.externo::after{
+  content: " \1F517";
+}
+
+.container{
+  width: min(100% - 2 * var(--s-2), var(--max));
+  margin-inline: auto;
+}
+
+.site-header{
+  background: linear-gradient(to bottom, var(--cor3), var(--cor5));
+  text-align: center;
+  padding: 40px 0 var(--s-2);
+}
+
+.site-title{
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 400;
+  text-shadow: 2px 2px 0 rgba(0,0,0,.25);
+  margin-bottom: var(--s-1);
+}
+
+.site-subtitle{
+  color: #fff;
+  max-width: 60ch;
+  margin-inline: auto;
+}
+
+.site-nav{
+  background: var(--cor5);
+  box-shadow: 0 7px 7px rgba(0,0,0,.18);
+}
+
+.nav-list{
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: var(--s-1) 0;
+}
+
+.nav-link{
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 12px;
+  border-radius: var(--r-sm);
+  transition: background-color .2s, color .2s;
+}
+
+.nav-link:hover{
+  background: var(--cor3);
+  color: var(--cor5);
+}
+
+.nav-link:focus-visible,
+.post a:focus-visible{
+  outline: 3px solid var(--cor1);
+  outline-offset: 3px;
+}
+
+main.container{
+  background: #fff;
+  margin-top: var(--s-2);
+  margin-bottom: 30px;
+  padding: var(--s-2);
+  border-radius: 0 0 var(--r-md) var(--r-md);
+  box-shadow: var(--shadow);
+}
+
+.post-title{
+  font-family: var(--font-android);
+  color: var(--cor5);
+  font-weight: 400;
+  margin-bottom: var(--s-1);
+}
+
+.section-title{
+  font-family: var(--font-android);
+  color: var(--cor4);
+  font-weight: 400;
+  font-size: 1.25rem;
+  background: linear-gradient(to right, var(--cor1), transparent);
+  padding-left: 10px;
+  margin: var(--s-2) 0 var(--s-1);
+}
+
+.post p{
+  margin: 14px 0;
+  text-align: justify;
+  text-indent: 40px;
+  font-size: 1.05rem;
+  line-height: 2;
+}
+
+.post strong{
+  color: var(--cor4);
+}
+
+.post a{
+  color: var(--cor5);
+  background: var(--cor1);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.post a:hover{
+  text-decoration: underline;
+  color: var(--cor3);
+}
+
+.figure{
+  margin: var(--s-1) 0;
+}
+
+.caption{
+  margin-top: 8px;
+  color: rgba(0,0,0,.75);
+}
+
+.image-small{
+  max-width: 350px;
+  margin: var(--s-1) auto;
+}
+
+.embed{
+  background: var(--cor5);
+  margin: var(--s-2) calc(var(--s-2) * -1);
+  padding: var(--s-2);
+}
+
+.embed iframe{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: var(--r-sm);
+  background: #000;
+}
+
+.card{
+  background: var(--cor1);
+  padding: var(--s-1);
+  border-radius: var(--r-md);
+  box-shadow: 3px 3px 10px rgba(0,0,0,.25);
+  margin-top: var(--s-2);
+}
+
+.card-title{
+  background: var(--cor5);
+  color: #fff;
+  padding: 8px 10px;
+  margin: -10px -10px 10px;
+  border-radius: var(--r-md) var(--r-md) 0 0;
+}
+
+.checklist{
+  list-style: none;
+  columns: 2;
+  margin: var(--s-1) 0;
+}
+
+.checklist li{
+  padding: 4px 0;
+  break-inside: avoid;
+}
+
+.checklist li::before{
+  content: "\2714\00A0";
+}
+
+@media (max-width: 620px){
+  .site-title{ font-size: 2.2rem; }
+  .checklist{ columns: 1; }
+}
+
+.site-footer{
+  background: var(--cor5);
+  color: #fff;
+  text-align: center;
+  font-size: .9rem;
+  padding: 8px 0;
+}
+
+.site-footer a{
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.site-footer a:hover{
+  text-decoration: underline;
+  color: var(--cor1);
+}

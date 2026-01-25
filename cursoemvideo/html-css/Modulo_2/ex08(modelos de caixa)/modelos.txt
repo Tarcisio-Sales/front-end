@@ -1,0 +1,8 @@
+box-level: sempre começa na linha de baixo, ocupa toda a largura e pula para a próxima linha.
+exemplo: <div> <h1 - h6> <p>
+<main>, <header>, <nav>, <article>, <aside>, <footer>, <form>,<video>
+
+inline-level: começa na mesma linha, não ocupa toda a largura e o conteúdo continua na mesma linha.
+exemplo: <span>, <a>, <code>, <small>, <strong>, <em>, <sup>, <sub>, <label>, <botton>, <input>,<select>
+
+box-shadow/text-shadow: usar dev tools do chrome para criar e copiar para o código css.
