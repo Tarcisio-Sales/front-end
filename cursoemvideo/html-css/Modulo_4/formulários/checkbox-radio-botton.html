@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox e Radio Button</title>
+    
+</head>
+<body>
+    <h1>Checkbox e Radio Button</h1>
+    <form action="arquivo-teste.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Sexo</legend>
+            <label>
+                <input type="radio" name="sexo">Masculino
+            </label> <br>
+            <label>
+                <input type="radio" name="sexo" checked>Feminino
+            </label>
+        </fieldset>
+
+        <fieldset >
+            <legend>Esportes favoritos</legend>
+            <label>
+                <input type="checkbox" name="esfut" id="iesfut" checked> Futebol
+            </label> <br> 
+            <label>
+                <input type="checkbox" name="esbas" id="iesbas"> Basquete
+            </label> <br>
+            <label>
+                <input type="checkbox" name="esnat" id="iesnat"> Natação
+            </label> <br>
+            <label>
+                <input type="checkbox" name="esten" id="iesten"> Tênis
+            </label> <br>
+            
+            <!-- 
+            Envolvi o input em um label para quando clicar na palavra a caixa ser marcada ou desmarcada. 
+             
+            checked: a opção desejada já vem marcada por default.
+
+            No botão de rádio, o name precisa ser igual para apenas uma opção ser validada.
+            
+            -->
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+
+    </form>
+</body>
+</html>
