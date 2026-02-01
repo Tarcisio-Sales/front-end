@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplos</h1>
+    <form action="arquivo-teste.php" method="get" autocomplete="on">
+     
+    <p>
+        <label>Cor: <input type="color" name="nivel" id="inivel" value="#ffff00"></label> 
+    </p>
+    <p>
+        <label>
+            Nível de Satisfação <input type="range" min="1" max="5" value="2"> 
+            <!-- O padrão é 0 a 100 e value na metade -->
+        </label>
+    </p>
+    <p>
+        <label>
+            Foto do perfil: <input type="file">
+            <!-- Precisa usar metodo POST -->
+        </label>
+    </p>
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </p>
+
+
+    </form>
+</body>
+</html>
