@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Meu primeiro formulário</h1>
+    
+    <!--Metodos de envio:
+        GET: Compartilhar url; quando os dados não são sensiveis; até 3000 letras; não pode enviar foto;
+
+        POST: para dados sensíveis; > 3kbytes;
+
+        required não deixa o enviar o campo vazio;
+
+        min e max length é a quantidade de caracteres; 
+
+        placeholder: nomes no formulário;
+
+        size: tamanho da caixa;
+
+
+
+    
+    -->
+    <form action="arquivo-teste.php" method="post" autocomplete="on">
+        <p>
+            <label for="iusu">Usuário</label>
+            <input type="text" name="usu" id="iusu" required minlength="8" maxlength="15" placeholder="nome do usuário" autocomplete="username">
+        </p>
+        <p>
+            <label for="isen">Senha</label>
+            <input type="password" name="sensiveis" id="isen" required minlength="8" size="12" placeholder="senha do usuário" autocomplete="current-password">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+    </form>
+</body>
+</html>
+

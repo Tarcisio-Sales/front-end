@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <!--Metodos de envio:
+        GET: Compartilhar url; quando os dados não são sensiveis; até 3000 letras; não pode enviar foto;
+
+        POST: para dados sensíveis; > 3kbytes;
+
+        required não deixa o enviar o campo vazio;
+
+        min e max length é a quantidade de caracteres; 
+
+        placeholder: nomes no formulário;
+
+        size: tamanho da caixa;
+
+        value: inicia com um valor;
+
+    
+    -->
+    <h1>Teste formulário</h1>
+    <form action="arquivo-teste.php" method="get">
+        <p>
+            <label for="inome">Nome</label>
+            <input type="text" name="nome" id="inome" required maxlength="30" placeholder="Nome completo" autocomplete="name">
+        </p>
+        <p>
+            <label for="imedia">Média</label>
+            <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.1" required value="5">
+        </p>
+        <p>
+            <label for="imes">Período Letivo</label>
+            <input type="month" name="mes" id="imes" value="2020-07">
+        </p>
+        <p>
+            <label for="idia">Dia da Prova</label>
+            <input type="date" name="Dia" id="idia" value="2020-07-14">
+        </p>
+        <p>
+            <label for="ihora">Horario da prova</label>
+            <input type="time" name="hora" id="ihora">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+
+    </form>
+</body>
+</html>
