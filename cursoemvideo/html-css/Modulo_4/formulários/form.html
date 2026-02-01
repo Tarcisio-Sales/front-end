@@ -11,9 +11,16 @@
     </style>
 </head>
 <body>
+    
     <h1>Meu primeiro formulário</h1>
     
-    <form action="cadastro.php" autocomplete="off">
+    <!--Metodos de envio:
+        GET: Compartilhar url; quando os dados não são sensiveis; até 3000 letras; não pode enviar foto;
+
+        POST: para dados sensíveis; > 3kbytes;
+    
+    -->
+    <form action="cadastro.php" method="GET" autocomplete="off">
         
         <p><label for="inome">Nome:</label> 
             <input type="text" name="nome" id="inome"></p>
@@ -24,3 +31,4 @@
     </form>
 </body>
 </html>
+
