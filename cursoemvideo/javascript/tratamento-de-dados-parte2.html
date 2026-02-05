@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        /*  */
+        body{ 
+            background-color: rgb(103, 124, 131);
+            color: white;
+            font-size: 20pt;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            color: rgb(255, 255, 2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Já me livrei da Maldição.</p>
+
+    <script>
+
+        // Comando window.prompt retorna uma string
+        // Precisa converter o tipo string para number
+        // number(n1) -> converter para qualquer tipo numérico
+        // Number.parseInt() ou Number.parseFloat() -> converte para o tipo especifico.
+        // String(s) ou n.toString -> converte um número para um string
+
+        // Uso de tamplate string -> usar crase e placeholder(${})
+        // Para usar concatenação use aspas simples ou dupla e +
+
+        //s.length -> tamanho da string
+        //s.to.UpperCase() -> tudo para maiusculas
+        //s.to.LowerCase() -> tudo para minusculas
+
+        // resultado em valor monetário: n1.toLocaleString('pt-BR', {style: "currency", currency: 'BRL'}) 
+        // resultado em valor monetário: n1.toLocaleString('pt-BR', {style: "currency", currency: 'USD'}) 
+        // resultado em valor monetário: n1.toLocaleString('pt-BR', {style: "currency", currency: 'EUR'})                                 
+
+        var n1 = Number(window.prompt("Digite um númro: "))
+        var n2 = Number(window.prompt("Digite outro número: "))
+        var soma = n1 + n2
+        //concatenação
+        window.alert("A soma é " + soma + " . Concatenada!")
+        window.alert(`A soma entre ${n1} e ${n2} é ${soma}`)
+
+        var nome = window.prompt("Qual o seu nome?")
+        document.write(`Olá, <strong> ${nome} </strong>! Seu nome tem ${nome.length} letras. <br>`)
+        document.write(`Seu nome em maiusculas é ${nome.toUpperCase()}. <br>`)
+        document.write(`Seu nome em minusculas é ${nome.toLowerCase()}. <br>`)
+
+            
+    </script>
+
+</body>
+</html>
