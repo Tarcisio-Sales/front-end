@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Analisador de Números</title>
+  <meta name="description" content="Analisador de números com microinterações, animações e validações." />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <header class="hero" aria-label="Cabeçalho">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <h1 class="hero__title">Analisador de Números</h1>
+    <p class="hero__subtitle">Valide, adicione, finalize. Sem drama. Só números.</p>
+  </header>
+
+  <main class="container" aria-label="Conteúdo principal">
+    <section class="card" aria-label="Entrada e lista">
+      <div class="card__header">
+        <h2 class="card__title">Entrada</h2>
+        <div class="chip" id="chipStatus" aria-live="polite">Pronto</div>
+      </div>
+
+      <form class="form" id="form" autocomplete="off">
+        <label class="label" for="fnum">Número (1 a 100)</label>
+
+        <div class="row">
+          <div class="field">
+            <input
+              id="fnum"
+              name="fnum"
+              type="number"
+              inputmode="numeric"
+              min="1"
+              max="100"
+              placeholder="Ex.: 42"
+              aria-describedby="hint"
+            />
+            <span class="field__glow" aria-hidden="true"></span>
+          </div>
+
+          <button class="btn btn--primary" type="submit" id="btnAdd">
+            <span class="btn__icon" aria-hidden="true">+</span>
+            Adicionar
+          </button>
+        </div>
+
+        <p class="hint" id="hint">
+          Dica: Enter adiciona. Duplicados são bloqueados.
+        </p>
+
+        <div class="listWrap">
+          <div class="listWrap__header">
+            <h3 class="listWrap__title">Lista</h3>
+            <button class="btn btn--ghost" type="button" id="btnClear" title="Limpar lista">
+              Limpar
+            </button>
+          </div>
+
+          <select
+            id="flista"
+            name="flista"
+            size="7"
+            class="list"
+            aria-label="Lista de valores adicionados"
+          ></select>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn--accent" type="button" id="btnFinish">
+            Finalizar
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card card--results" aria-label="Resultados">
+      <div class="card__header">
+        <h2 class="card__title">Resultados</h2>
+        <div class="mini" aria-hidden="true"></div>
+      </div>
+
+      <div class="stats" id="stats" aria-live="polite">
+        <div class="stat">
+          <div class="stat__label">Total</div>
+          <div class="stat__value" data-k="total">0</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat__label">Maior</div>
+          <div class="stat__value" data-k="max">–</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat__label">Menor</div>
+          <div class="stat__value" data-k="min">–</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat__label">Soma</div>
+          <div class="stat__value" data-k="sum">0</div>
+        </div>
+
+        <div class="stat stat--wide">
+          <div class="stat__label">Média</div>
+          <div class="stat__value" data-k="avg">0.00</div>
+        </div>
+      </div>
+
+      <div class="note" id="note">
+        Adicione números para ver as estatísticas.
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© CursoemVideo (com um banho de CSS e respeito próprio)</small>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="./js/app.js" defer></script>
+</body>
+</html>

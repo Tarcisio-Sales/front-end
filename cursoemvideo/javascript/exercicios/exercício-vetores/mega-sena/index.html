@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simulador Mega-Sena</title>
+  <meta name="description" content="Simulador de sorteios da Mega-Sena: selecione 6 a 20 números e rode até ganhar." />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <header class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <h1 class="hero__title">Simulador Mega-Sena</h1>
+    <p class="hero__subtitle">
+      Selecione de 6 a 20 números. O app simula sorteios até você acertar a sena.
+    </p>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <div class="card__head">
+        <h2 class="card__title">Cartela (1–60)</h2>
+        <div class="badge" id="statusBadge" aria-live="polite">Pronto</div>
+      </div>
+
+      <div class="summary">
+        <div class="summary__item">
+          <div class="k">Selecionados</div>
+          <div class="v" id="selCount">0</div>
+        </div>
+        <div class="summary__item">
+          <div class="k">Preço por sorteio</div>
+          <div class="v" id="betPrice">—</div>
+        </div>
+        <div class="summary__item">
+          <div class="k">Chance (aprox.)</div>
+          <div class="v" id="odds">—</div>
+        </div>
+      </div>
+
+      <div class="grid" id="grid" aria-label="Cartela de números"></div>
+
+      <div class="controls">
+        <button class="btn btn--primary" id="btnStart" type="button">Iniciar simulação</button>
+        <button class="btn btn--ghost" id="btnStop" type="button" disabled>Parar</button>
+        <button class="btn btn--danger" id="btnReset" type="button">Reset</button>
+      </div>
+
+      <p class="hint">
+        Vitória = os 6 números sorteados estão dentro do seu conjunto.
+        Isso é simulação, não recomendação de aposta real.
+      </p>
+    </section>
+
+    <section class="card card--right">
+      <div class="card__head">
+        <h2 class="card__title">Execução</h2>
+        <div class="dot" aria-hidden="true"></div>
+      </div>
+
+      <div class="run">
+        <div class="run__row">
+          <div class="k">Sorteios simulados</div>
+          <div class="v mono" id="draws">0</div>
+        </div>
+        <div class="run__row">
+          <div class="k">Gasto acumulado</div>
+          <div class="v mono" id="spent">R$ 0,00</div>
+        </div>
+        <div class="run__row">
+          <div class="k">Velocidade</div>
+          <div class="v mono" id="speed">0 /s</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel__head">
+          <h3 class="panel__title">Último sorteio</h3>
+          <span class="pill" id="lastTag">—</span>
+        </div>
+        <div class="balls" id="lastDraw" aria-label="Últimos números sorteados"></div>
+      </div>
+
+      <div class="result" id="resultBox">
+        <h3 class="result__title">Resultado</h3>
+        <div class="result__text" id="resultText">Aguardando seleção…</div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <footer class="foot">
+    <small>© Simulador educacional. Sem ilusões garantidas.</small>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
